@@ -1,21 +1,25 @@
 #-*- coding: utf-8 -*-
 import numpy
-import math
-import time, sys
+from math import sqrt
 
-end_time = time.time() + 60	
+def decomp(n):
+	"""Finds the prime factors of 'n'"""
+	pFact, limit, cheking, number = [], int(sqrt(n)) + 1, 2, n
+	#Verifying if the number is 1
+	if n == 1: 
+		return [1]
+	for checking in range(2,limit):
+		#While the number is divible by that prime number...
+		while number % checking == 0:
+			#Adding the prime in the end of the list
+			pFact.append(checking)
+			#Going to the next number to see he's primes factors
+			number /= check
+		#If the number is greater than 1, he's added to the list end
+		if number > 1:
+			pFact.append(number)
+		#returning the list with factors
+		return pFact
 
-def primao():
-	x = 1
-	i = 2
-	c = 0
-	while time.time() < end_time:
-		c = 0
-		for i in range(2,x):
-			if (x % i == 0):
-				c += 1
-		if (c == 0):
-			print(x)
-		x += 1
-
-primao()
+i = int(input())
+print decomp(i)

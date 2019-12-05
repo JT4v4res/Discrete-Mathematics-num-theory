@@ -1,6 +1,7 @@
 #-*- coding: utf-8 -*-
 import math
 import numpy
+
 x = int(input())
 i = 2;
 c = 0;
