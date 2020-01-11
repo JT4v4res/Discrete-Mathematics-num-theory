@@ -18,4 +18,4 @@ y = 1
 a = int(input())
 b = int(input())
 mcd = euclidean_extended_algorithm(a,b,x,y)
-print("mcd(", a, ",", b,") = ", mcd)
+print("mcd(",a,", ", b,") = ", mcd, sep='')
